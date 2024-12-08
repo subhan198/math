@@ -69,8 +69,8 @@
     function check(){
         let input1 = parseFloat(document.getElementById("num1").value);
         let input2 = parseFloat(document.getElementById("num2").value);
-        for(let i = 1; i <= input2; i++){
-            result += `<tr><td>${input1}</td><td>x</td><td>${i}</td><td>=</td><td>${input2 * i}</td></tr>`;
+        for(let i = 1; i <= input1; i++){
+            result += `<tr><td>${input1}</td><td>x</td><td>${i}</td><td>=</td><td>${input1 * i}</td></tr>`;
         }
         document.getElementById("mathtable").innerHTML = result; 
     }
