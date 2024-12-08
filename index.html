@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        body{
+            border: 1px solid;
+            background-image: url(img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        
+        }
+        .sec1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+        }
+        h1{
+            color: crimson;
+            margin-left:300px ;
+        }
+        label{
+            color: red;
+            font-weight: bold;
+        }
+        label input{
+            border-radius: 20px;
+            border-color: red;
+            color: crimson;
+        }
+        th,td{
+            border: 2px solid;
+            color: red;  
+        }  
+        button{
+            width: 100px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-left: 100px;
+            background-color: rgb(25, 25, 215);
+        } 
+            
+    </style>
+    
+</head>
+<body>
+    <h1>MATHEMATICS TABLE</h1>
+<section class="sec1">
+        <label for="">
+    Number_of_table:<input type="number"id="num1"placeholder="enter number for table"></label><br>
+    <label for="">
+    How many times:<input type="number"id="num2"placeholder="enter number for table end">
+    </label>
+    <br>
+        <button onclick="check()">check</button>
+    </section>
+        <br><hr>
+        <table id="mathtable"></table>
+        
+
+
+    <script>
+        let result = ""
+    function check(){
+        let input1 = parseFloat(document.getElementById("num1").value);
+        let input2 = parseFloat(document.getElementById("num2").value);
+        for(let i = 1; i <= input2; i++){
+            result += `<tr><td>${input1}</td><td>x</td><td>${i}</td><td>=</td><td>${input2 * i}</td></tr>`;
+        }
+        document.getElementById("mathtable").innerHTML = result; 
+    }
+
+    
+    </script>
+
+    
+</body>
+</html>
